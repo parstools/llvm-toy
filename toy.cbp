@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="toy" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/toy" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++14" />
+					<Add option="-g" />
+					<Add option="-D_GLIBCXX_USE_CXX11_ABI=0" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/toy" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-std=c++0x" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add library="LLVMCore" />
+			<Add library="LLVMSupport" />
+			<Add library="LLVMDemangle" />
+			<Add library="rt" />
+			<Add library="dl" />
+			<Add library="pthread" />
+			<Add library="z" />
+			<Add library="m" />
+			<Add library="LLVMMCJIT" />
+			<Add library="LLVMExecutionEngine" />
+			<Add library="LLVMRuntimeDyld" />
+			<Add library="LLVMTarget" />
+			<Add library="LLVMObject" />
+		</Linker>
+		<Unit filename="codegen.cpp" />
+		<Unit filename="codegen.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="node.h" />
+		<Unit filename="parser.cpp" />
+		<Unit filename="parser.hpp" />
+		<Unit filename="tokens.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
